@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-gray-800 via-gray-900 to-black font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">My Portfolio</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
+                <li><a href="#projects" class="hover:underline">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="py-10 bg-gray-900">
+        <div class="container mx-auto text-center px-4">
+            <img src="https://via.placeholder.com/150" alt="Profile Image" class="rounded-full mx-auto mb-4 w-32 h-32">
+            <h2 class="text-3xl font-bold">Kittipong Meeanan</h2>
+            <p class="text-gray-400">Web Designer</p>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Skills Section -->
+        <section class="bg-gray-800 p-6 rounded shadow">
+            <h3 class="text-xl font-bold mb-4">Skills</h3>
+            <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-700 px-3 py-1 rounded">HTML</li>
+                <li class="bg-gray-700 px-3 py-1 rounded">CSS</li>
+                <li class="bg-gray-700 px-3 py-1 rounded">JavaScript</li>
+                <li class="bg-gray-700 px-3 py-1 rounded">Python</li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section class="bg-gray-800 p-6 rounded shadow">
+            <h3 class="text-xl font-bold mb-4">Education</h3>
+            <ul class="space-y-2 text-gray-400">
+                <li>
+                    <strong>High School:</strong> Propitpaya School <br>
+                    <span>20xx - Today</span>
+                </li>
+                <li>
+                    <strong>University:</strong> Placeholder University <br>
+                    <span>20xx - 2021</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- About Section -->
+        <section class="bg-gray-800 p-6 rounded shadow col-span-1 md:col-span-3">
+            <h3 class="text-xl font-bold mb-4">About Me</h3>
+            <p class="text-gray-300">Hi! I'm a web designer and I love to design websites and make them look good. I'm always looking for new projects to work on and new things to learn.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="col-span-1 md:col-span-3">
+            <h3 class="text-xl font-bold mb-4">Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-800 p-4 rounded shadow">
+                    <img src="https://via.placeholder.com/300x150" alt="Project 1" class="rounded mb-4">
+                    <h4 class="text-lg font-bold">Portfolio Website</h4>
+                    <p class="text-gray-400">My personal project for showcasing my skills.</p>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="col-span-1 md:col-span-3">
+            <h3 class="text-xl font-bold mb-4">Certificates</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-800 p-4 rounded shadow">
+                    <img src="https://via.placeholder.com/150" alt="Certificate 1" class="w-full h-32 object-cover mb-4 rounded">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-400">Issued by Example Institution</p>
+                </div>
+                <!-- Add more certificates here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-4">
+        <div class="container mx-auto text-center px-4">
+            <p>&copy; 2024 Kittipong Meeanan. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
