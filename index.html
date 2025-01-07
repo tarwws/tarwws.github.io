@@ -6,95 +6,229 @@
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-r from-gray-800 via-gray-900 to-black font-sans">
+<body class="bg-white text-gray-900 font-sans">
+
     <!-- Navbar -->
-    <nav class="bg-gray-800 text-white py-4">
+    <nav class="bg-gray-100 text-gray-9 py-4 shadow">
         <div class="container mx-auto flex justify-between items-center px-4">
             <h1 class="text-2xl font-bold">My Portfolio</h1>
-            <ul class="flex space-x-4">
+            <button id="menu-btn" class="sm:hidden block text-2xl">
+                ☰
+            </button>
+            <ul id="menu" class="hidden sm:flex space-x-4">
                 <li><a href="#home" class="hover:underline">Home</a></li>
                 <li><a href="#about" class="hover:underline">About</a></li>
                 <li><a href="#projects" class="hover:underline">Projects</a></li>
-                <li><a href="#certificates" class="hover:underline">certificates</a></li>
+                <li><a href="#certificates" class="hover:underline">Certificates</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header id="home" class="py-10 bg-gray-900">
-        <div class="container mx-auto text-center px-4">
-            <img src="https://via.placeholder.com/150" alt="Profile Image" class="rounded-full mx-auto mb-4 w-32 h-32">
-            <h2 class="text-3xl font-bold">Kittipong Meeanan</h2>
-            <p class="text-gray-400">Web Designer</p>
+    <!-- Header -->
+    <header id="home" class="py-10 bg-gray-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-4 text-center md:text-left">
+            <div class="w-32 h-32 sm:w-96 sm:h-96 rounded-full overflow-hidden shadow mb-4 md:mb-0 mx-auto md:mx-0">
+                <img src="img/IMG_20241008_233107.jpg" alt="Profile Image" class="w-full h-full object-cover">
+            </div>
+            <div class="md:pl-8">
+                <h1 class="text-2xl sm:text-5xl font-bold">Kittipong Meeanan</h1>
+                <p class="text-gray-600 text-base sm:text-2xl">Web Developer</p>
+            </div>
         </div>
     </header>
 
-    <!-- Main Section -->
-    <main class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 grid grid-cols-1 gap-8">
+
         <!-- Skills Section -->
-        <section class="bg-gray-800 p-6 rounded shadow">
+        <section class="bg-gray-100 p-6 rounded shadow">
             <h3 class="text-xl font-bold mb-4">Skills</h3>
             <ul class="flex flex-wrap gap-2">
-                <li class="bg-gray-700 px-3 py-1 rounded">HTML</li>
-                <li class="bg-gray-700 px-3 py-1 rounded">CSS</li>
-                <li class="bg-gray-700 px-3 py-1 rounded">JavaScript</li>
-                <li class="bg-gray-700 px-3 py-1 rounded">Python</li>
-            </ul>
-        </section>
-
-        <!-- Education Section -->
-        <section class="bg-gray-800 p-6 rounded shadow">
-            <h3 class="text-xl font-bold mb-4">Education</h3>
-            <ul class="space-y-2 text-gray-400">
-                <li>
-                    <strong>High School:</strong> Propitpaya School <br>
-                    <span>20xx - Today</span>
-                </li>
-                <li>
-                    <strong>University:</strong> Placeholder University <br>
-                    <span>20xx - 2021</span>
-                </li>
+                <li class="bg-gray-200 px-3 py-1 rounded">HTML</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">CSS</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">JavaScript</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">Python</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">tailwindcss</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">Figma</li>
             </ul>
         </section>
 
         <!-- About Section -->
-        <section class="bg-gray-800 p-6 rounded shadow col-span-1 md:col-span-3">
+        <section class="bg-gray-100 p-6 rounded shadow">
             <h3 class="text-xl font-bold mb-4">About Me</h3>
-            <p class="text-gray-300">Hi! I'm a web designer and I love to design websites and make them look good. I'm always looking for new projects to work on and new things to learn.</p>
+            <p class="text-gray-700">Hi! I'm a web designer and I love to design websites and make them look good. I'm always looking for new projects to work on and new things to learn.</p>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="col-span-1 md:col-span-3">
+        <section id="projects">
             <h3 class="text-xl font-bold mb-4">Projects</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-gray-800 p-4 rounded shadow">
-                    <img src="https://via.placeholder.com/300x150" alt="Project 1" class="rounded mb-4">
-                    <h4 class="text-lg font-bold">Portfolio Website</h4>
-                    <p class="text-gray-400">My personal project for showcasing my skills.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="https://via.placeholder.com/300x150" alt="Project" class="rounded mb-4">
+                    <h4 class="text-lg font-bold">Project Title</h4>
+                    <p class="text-gray-600">Short description of the project.</p>
                 </div>
-                <!-- Add more projects here -->
+                <!-- Add more projects as needed -->
             </div>
         </section>
 
         <!-- Certificates Section -->
-        <section id="certificates" class="col-span-1 md:col-span-3">
+        <section id="certificates">
             <h3 class="text-xl font-bold mb-4">Certificates</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-gray-800 p-4 rounded shadow">
-                    <img src="https://via.placeholder.com/150" alt="Certificate 1" class="w-full h-32 object-cover mb-4 rounded">
-                    <h4 class="text-lg font-bold">Certificate Title</h4>
-                    <p class="text-gray-400">Issued by Example Institution</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/42Bangkok.png" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">42Bangkok </h4>
+                    <p class="text-gray-600">"Discovery Piscine: BASIC WEB DEVELOPMENT"</p>
                 </div>
-                <!-- Add more certificates here -->
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/CS WEB .jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/CS AI .jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/CS AR 2024.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/CS AR 2567.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/CS microbit.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/KMITL .png" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/KMITL ENGINEERING 2023.png" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/KMITL EXPO 2023.png" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/KMITL EXPO 2023.webp" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/KMITL EXPO 2024.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/KMITL MASTERCLASS PY.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/OPEN HOUSE 2022 .jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/OPEN HOUSE 2024 DIGITALL.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/Open House 2024 UEFN.png" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/Open House 2024.png" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/OPEN HOUSE KBS.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/SMART FARMING.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/tobeit68-online-certificate.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/TobeIT68 onsite.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/คลอโรฟิลล์ เม็ดสีขียวมหศจรรย์.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/คลอโรฟิลล์.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/บีบราส ไทยแลนด์ 2566.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/วิศวะ C++.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/วิศวะ PY.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/สืบสันดาน.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <img src="img/เลือกอย่างไรให้ชุมชนได้ HIGH PROFIT.jpg" alt="Certificate" class="w-full h-98 object-cover rounded mb-4">
+                    <h4 class="text-lg font-bold">Certificate Title</h4>
+                    <p class="text-gray-600">Issued by Example Institution</p>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 py-4">
+    <footer class="bg-gray-100 text-gray-600 py-4">
         <div class="container mx-auto text-center px-4">
             <p>&copy; 2024 Kittipong Meeanan. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Script for Toggle Menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
